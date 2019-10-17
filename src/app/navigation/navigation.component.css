@@ -1,0 +1,17 @@
+.nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background-color: mediumaquamarine;
+    padding: 2%;
+}
+
+a {
+    text-decoration: none;
+    font-size: x-large;
+    color: black;
+    text-align: center;
+}
+
+a:hover {
+color: red;
+}

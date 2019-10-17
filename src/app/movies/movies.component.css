@@ -1,0 +1,15 @@
+.containers {
+    width: 100%;
+    background-color: aqua; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 3%;
+}
+img.movieDisplay {
+    width: 80%;
+    display: block;
+    margin: auto;
+}
+.movieList {
+    background-color: lightcoral;
+}

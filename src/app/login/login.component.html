@@ -1,0 +1,11 @@
+<div class="container">
+    <h2>Complete the form below</h2>
+<form>
+    <div class="form-group">
+        <label for="name">Name</label>
+    <input id="name" name="name" class="form-control" [(ngModel)]="name">
+    <p class="displayName">My name is {{name | uppercase}}</p>
+    <button class="btn btn-primary">Ok</button>
+    </div>
+</form>
+</div>
