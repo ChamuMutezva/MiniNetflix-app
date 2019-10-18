@@ -6,10 +6,21 @@
     grid-gap: 3%;
 }
 img.movieDisplay {
-    width: 80%;
+    width: 100%;
     display: block;
     margin: auto;
 }
 .movieList {
     background-color: lightcoral;
+}
+p {
+     font-size: small;
+    text-align: center;
+}
+
+input.searchArea {
+    margin-left: 5%;
+    width: 40%;
+    box-shadow: 2px 3px 2px 3px grey;
+    margin-bottom: 2%;
 }

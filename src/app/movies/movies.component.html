@@ -1,5 +1,5 @@
 <label for="name">Filter by name:</label>
-<input type="text" name="myFavMovie" [(ngModel)]="listFilter">
+<input type="text" name="myFavMovie" [(ngModel)]="listFilter" class="searchArea">
 <div class="containers">
     <div class="movieList" *ngFor="let movie of filteredMovies">
         <p>Title: {{ movie.title}}</p>

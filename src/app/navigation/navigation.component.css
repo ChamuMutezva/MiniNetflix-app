@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: mediumaquamarine;
     padding: 2%;
+    margin-bottom: 2%;
 }
 
 a {
