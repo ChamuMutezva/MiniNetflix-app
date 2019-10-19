@@ -4,15 +4,15 @@
 
 export const environment = {
   production: false,
-  firebase: {
-    apiKey: "AIzaSyDyRkzKTl-rWJ0PADJri8bCQht24CRTJMU",
-    authDomain: "fuelfinderfinal.firebaseapp.com",
-    databaseURL: "https://fuelfinderfinal.firebaseio.com",
-    projectId: "fuelfinderfinal",
-    storageBucket: "fuelfinderfinal.appspot.com",
-    messagingSenderId: "427358957644",
-    appId: "1:427358957644:web:8306f690351721d49604e9",
-    measurementId: "G-C5D8E0HV8R"
+  firebase:{
+    apiKey: "AIzaSyAf28iNu9mwMgrf-fXkz9wJnSnbXKjDdJI",
+    authDomain: "mininetflix-app.firebaseapp.com",
+    databaseURL: "https://mininetflix-app.firebaseio.com",
+    projectId: "mininetflix-app",
+    storageBucket: "mininetflix-app.appspot.com",
+    messagingSenderId: "446970091111",
+    appId: "1:446970091111:web:dbee2b5d6aab670357a6c2",
+    measurementId: "G-XNW0G10R6H"
   }
 };
 

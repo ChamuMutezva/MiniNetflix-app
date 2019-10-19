@@ -24,6 +24,11 @@ export class MoviesService {
 
     }
 
+    getMovie(id:number):Observable<IMovies> {
+return this.http.get<IMovies>('/api/movies/' + id)
+.pipe(catchError(this.handleError))
+    }
+
     private handleError(err: HttpErrorResponse){
         let errorMessage = '';
         if (err.error instanceof ErrorEvent) {

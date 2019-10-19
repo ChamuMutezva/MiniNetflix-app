@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import {  AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -14,6 +16,7 @@ import { LoginComponent } from './login/login.component';
 import { appRoutes } from 'src/routes';
 import { HttpClient } from 'selenium-webdriver/http';
 import { environment } from 'src/environments/environment';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,7 @@ import { environment } from 'src/environments/environment';
     MoviesComponent,
     MylistComponent,
     LoginComponent,
+    MovieDetailComponent,
    
   ],
   imports: [
@@ -31,6 +35,8 @@ import { environment } from 'src/environments/environment';
   RouterModule.forRoot(appRoutes),
   HttpClientModule,
   AngularFireModule.initializeApp(environment.firebase),
+  AngularFirestoreModule,
+  AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
