@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { IMovies } from './moviesList';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { Observable, throwError, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 
 @Injectable({
@@ -9,9 +9,9 @@ import { catchError, tap } from 'rxjs/operators';
 }
 )
 export class MoviesService {
-
-    private moviesUrl = '/api/movies/movies.json';
-
+   // movieId = this.route.snapshot.paramMap.get('objectId');
+    //private moviesUrl = '/api/movies/movies.json';
+    private moviesUrl = '/assets/api.json';
     constructor(private http: HttpClient) {
         console.log(this.moviesUrl);
     }
@@ -24,19 +24,39 @@ export class MoviesService {
 
     }
 
-    getMovie(id:number):Observable<IMovies> {
-return this.http.get<IMovies>('/api/movies/' + id)
-.pipe(catchError(this.handleError))
-    }
+    getMovie(movieID, callback: (data) => void) { 
+        return this.getMovies().subscribe(result => {
+            
+          // check the api.json for the movieID 
+          
+          console.log('---------');
+          let returnObj = {};
+          const matchedResult = result.map(movie=>{
+            if(movie.objectId == movieID){
+                console.log('returning movie details ', movie);
+                returnObj = movie;
+            }
+          });
+          
+          console.log('---------');
 
-    private handleError(err: HttpErrorResponse){
-        let errorMessage = '';
-        if (err.error instanceof ErrorEvent) {
-            errorMessage = `An error occured: ${err.error.message}`;
-        } else {
-            errorMessage = `Server returned code: ${err.status}, error message is ${err.message}`;
-        }
-        console.log(errorMessage);
-        return throwError(errorMessage);
+          callback(returnObj);  // execute the callback function to act on the matched result;
+        },
+          error => {
+            console.log(error);
+          }
+        );
+      }
+
+   /* getMovie(objectId: string): Observable<IMovies> {
+        return this.http.get<IMovies>('/assets/' + objectId)
+            .pipe(catchError(this.handleError<IMovies>('getMovies')))
     }
+*/
+    private handleError<T>(operation = 'operation', result?: T) {
+       return (error: any): Observable<T> => {
+           console.log(error);
+           return of(result as T)
+       }
+    } 
 }

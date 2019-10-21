@@ -1,0 +1,9 @@
+img {
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+h2, p {
+    text-align: center;
+}

@@ -1,13 +1,13 @@
 <label for="name">Filter by name:</label>
 <input type="text" name="myFavMovie" [(ngModel)]="listFilter" class="searchArea">
 <div class="containers">
-    <div [routerLink]="['/movies', movie.id]"   class="movieList" *ngFor="let movie of filteredMovies">
-        <p>Title: {{ movie.title}}</p>
+    <div class="movieList" *ngFor="let movie of filteredMovies">
+       <h2>Title: {{ movie.title}}</h2> 
         <img [src]="movie.image.url" alt="movie.image.name" class="movieDisplay">
         <p>{{movie.description}}</p>
         <p>{{movie.releaseYear}}</p>
        
-        <button class="btn btn-secondary">Details</button>
+        <button class="btn btn-secondary"   [routerLink]="['/movies', movie.objectId]">Details</button>
     </div>
 
 </div>

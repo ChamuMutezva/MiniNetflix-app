@@ -1,12 +1,17 @@
 <h2>Movie details</h2>
 <div class="container">
     <div>
-        <p>Title: {{ movie.title}}</p>
-        <img [src]="movie.image.url" alt="movie.image.name" class="movieDisplay">
-        <p>{{movie.description}}</p>
-        <p>{{movie.releaseYear}}</p>
-       
-        
+        <p>Title: {{title}} </p>
+        <img [src]="image" alt="">
+
+        <p>{{releaseYear}}</p>
+        <p>{{descr}}</p>
+
+
+        <button class="btn btn-outline-secondary" (click)='onBack()'>
+            Back
+        </button>
+
     </div>
 
 </div>

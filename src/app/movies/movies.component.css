@@ -1,18 +1,61 @@
-.containers {
-    width: 100%;
-    background-color: aqua; 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 3%;
-}
-img.movieDisplay {
-    width: 100%;
-    display: block;
-    margin: auto;
-}
-.movieList {
-    background-color: lightcoral;
-}
+    @media only screen and (min-width: 280px) { 
+        .containers {
+           
+            width: 100%;
+            background-color: aqua; 
+            display: grid;
+            grid-template-columns: 1fr;            
+        }
+
+         h2 {
+            font-size: medium;
+            text-align: center;
+            padding: 1% 0;
+        }
+        .movieList {
+            background-color: lightcoral;
+            position: relative;
+        }
+      
+        img.movieDisplay {
+            width: 80%;
+            display: block;
+            margin: auto;
+            max-height: 40vh;
+        }
+
+        button.btn.btn-secondary {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+
+    }
+
+    @media only screen and (min-width: 580px) {
+        .containers {         
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2%;
+        }
+
+        img.movieDisplay {
+            width: 100%;           
+        }
+
+
+    }
+
+        @media only screen and (min-width: 780px) {
+            .containers {         
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 1%;
+            }
+         }
+
+
+
+
 p {
      font-size: small;
     text-align: center;
@@ -23,4 +66,8 @@ input.searchArea {
     width: 40%;
     box-shadow: 2px 3px 2px 3px grey;
     margin-bottom: 2%;
+}
+
+a {
+    color: black;
 }

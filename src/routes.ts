@@ -10,6 +10,6 @@ export const appRoutes: Routes =[
     {path: "login", component: LoginComponent },
     {path: "mylist", component: MylistComponent},
     {path: "movies", component: MoviesComponent},
-    {path: "movies/:id", component: MovieDetailComponent},
+    {path: "movies/:objectId", component: MovieDetailComponent},
     {path: "", redirectTo: "home", pathMatch: "full"}
 ]

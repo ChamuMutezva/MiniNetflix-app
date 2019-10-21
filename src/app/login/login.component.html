@@ -9,4 +9,7 @@
     </div>
 </form>
 </div>
-<p *ngFor="let item of items | async" >{{item.name}}</p>
+<div *ngFor="let item of items | async" >
+    <p>{{item.name}}</p>
+    <p>{{item.surname}}</p>
+</div>
