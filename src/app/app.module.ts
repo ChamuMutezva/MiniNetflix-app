@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {  AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import {  FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -36,7 +37,8 @@ import { MovieDetailComponent } from './movie-detail/movie-detail.component';
   HttpClientModule,
   AngularFireModule.initializeApp(environment.firebase),
   AngularFirestoreModule,
-  AngularFireStorageModule
+  AngularFireStorageModule,
+  FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

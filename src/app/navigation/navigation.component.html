@@ -1,6 +1,13 @@
-<div class="nav">
-    <a [routerLink]="['/home']" class="home">Home</a>
-    <a [routerLink]="['/movies']" class="movies">Movies</a>
-    <a [routerLink]="['/mylist']" class="myList">MyList</a>
-    <a [routerLink]="['/login']" class="login">Login</a>
-</div>
+<header>
+    <div class="modalControl">
+            <img class="logo" src="assets/images/netflix.jpg" alt="">
+            <fa-icon [icon]="filmIcon" class="menuCtrl"></fa-icon>
+            
+    </div>
+    <div class="nav">
+        <a [routerLink]="['/home']" class="home">Home</a>
+        <a [routerLink]="['/movies']" class="movies">Movies</a>
+        <a [routerLink]="['/mylist']" class="myList">MyList</a>
+        <a [routerLink]="['/login']" class="login">Login</a>
+    </div>    
+</header>

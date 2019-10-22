@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faBars} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navigation',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
-
+filmIcon = faBars;
   constructor() { }
 
   ngOnInit() {
