@@ -12,8 +12,12 @@ header {
     /*position: absolute;*/
 }
 
+.menu {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
 .menuCtrl {
-    justify-self: end;
+    justify-self: center;
     align-self: center;
     display: block;
 }
@@ -26,7 +30,7 @@ a {
 }
 
 img.logo {
-    max-height: 10vh;
+    max-height: 100%;
 }
 
 .modalControl {
@@ -45,7 +49,7 @@ color: red;
         display: none;
     }
     .nav {      
-        /*grid-template-columns: 1fr 1fr 1fr 1fr;          
-        position: relative;*/
+        grid-template-columns: 1fr 1fr 1fr 1fr;          
+       /* position: relative;*/
     }
 }

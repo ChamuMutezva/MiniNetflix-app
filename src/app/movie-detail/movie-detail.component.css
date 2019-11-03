@@ -1,3 +1,4 @@
+@media only screen and (min-width: 280px) { 
 img {
     width: 50%;
     display: block;
@@ -7,3 +8,14 @@ img {
 h2, p {
     text-align: center;
 }
+
+.details {
+    display: grid;
+}
+}
+
+@media only screen and (min-width: 780px) { 
+.details {
+    grid-template-columns: 1fr 1fr;
+    }
+ }

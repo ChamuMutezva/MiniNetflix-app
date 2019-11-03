@@ -17,6 +17,7 @@ export class MovieDetailComponent implements OnInit {
  image: string[];
   movieId = this.route.snapshot.paramMap.get('objectId');
   descr: string;
+genre: string[];
 
   constructor(private movieService: MoviesService,
     private route: ActivatedRoute, private router: Router) { };
@@ -29,6 +30,7 @@ export class MovieDetailComponent implements OnInit {
       this.image = resultMovie.image.url;
       this.releaseYear = resultMovie.releaseYear;
       this.descr = resultMovie.description;
+      this.genre = resultMovie.genre;
       console.log(this.image);
       
       //do something with resultMovie

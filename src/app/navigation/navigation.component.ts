@@ -8,9 +8,14 @@ import { faBars} from '@fortawesome/free-solid-svg-icons';
 })
 export class NavigationComponent implements OnInit {
 filmIcon = faBars;
-  constructor() { }
+
+  constructor() { 
+  
+  }
 
   ngOnInit() {
+     const menuCtrl = document.querySelector(".menuCtrl");
+    console.log(menuCtrl)
   }
 
 }

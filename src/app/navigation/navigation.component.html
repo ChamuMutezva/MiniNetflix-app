@@ -1,13 +1,15 @@
 <header>
     <div class="modalControl">
-            <img class="logo" src="assets/images/netflix.jpg" alt="">
-            <fa-icon [icon]="filmIcon" class="menuCtrl"></fa-icon>
-            
+            <img class="logo" src="assets/images/netflix.jpg" alt="">           
     </div>
-    <div class="nav">
-        <a [routerLink]="['/home']" class="home">Home</a>
-        <a [routerLink]="['/movies']" class="movies">Movies</a>
-        <a [routerLink]="['/mylist']" class="myList">MyList</a>
-        <a [routerLink]="['/login']" class="login">Login</a>
-    </div>    
+    <div class="menu">
+        <div class="nav">
+            <a [routerLink]="['/home']" class="home">Home</a>
+            <a [routerLink]="['/movies']" class="movies">Movies</a>
+            <a [routerLink]="['/mylist']" class="myList">MyList</a>
+            <a [routerLink]="['/login']" class="login">Login</a>
+        </div>  
+        <fa-icon [icon]="filmIcon" class="menuCtrl"></fa-icon>            
+    </div>
+      
 </header>

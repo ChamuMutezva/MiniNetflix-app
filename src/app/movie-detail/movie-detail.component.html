@@ -1,16 +1,23 @@
 <h2>Movie details</h2>
 <div class="container">
     <div>
-        <p>Title: {{title}} </p>
-        <img [src]="image" alt="">
+        <div class="details">
+            <img [src]="image" alt="">
+            <div class="finerDetails">
+                <p>Title: {{title}} </p>
+                <p>{{releaseYear}}</p>
+                <p>{{descr}}</p>
+                <ol >
+                    <li *ngFor="let item of genre">{{item}}</li>
+                </ol>
 
-        <p>{{releaseYear}}</p>
-        <p>{{descr}}</p>
+                <button class="btn btn-outline-secondary" (click)='onBack()'>
+                    Back
+                </button>
+            </div>
 
+        </div>
 
-        <button class="btn btn-outline-secondary" (click)='onBack()'>
-            Back
-        </button>
 
     </div>
 
