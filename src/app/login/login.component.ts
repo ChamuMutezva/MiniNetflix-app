@@ -7,7 +7,8 @@ import {Observable} from 'rxjs';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-//name: string = "Chamu";
+name: string = "Chamunorwa";
+surname: string = "Kuseri";
 items: Observable<any[]>
   constructor(db: AngularFirestore) { 
     this.items = db.collection("login").valueChanges();
