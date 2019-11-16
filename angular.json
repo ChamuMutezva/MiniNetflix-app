@@ -21,6 +21,7 @@
             "aot": false,
             "assets": [
               "src/favicon.ico",
+              "_redirects",
               "src/assets",
               "src/api"
             ],
