@@ -3,8 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  firebase:{
+  production: true,
+  firebase: {
     apiKey: "AIzaSyAf28iNu9mwMgrf-fXkz9wJnSnbXKjDdJI",
     authDomain: "mininetflix-app.firebaseapp.com",
     databaseURL: "https://mininetflix-app.firebaseio.com",
