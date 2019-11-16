@@ -5,9 +5,9 @@
             <img [src]="image" alt="">
             <div class="finerDetails">
                 <p>Title: {{title}} </p>
-                <p>{{releaseYear}}</p>
+                <p>Released: {{releaseYear}}</p>
                 <p>{{descr}}</p>
-                <ol >
+                <ol>Classification
                     <li *ngFor="let item of genre">{{item}}</li>
                 </ol>
 
